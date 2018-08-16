@@ -67,11 +67,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/skydragon/prebuilt/common/etc/calibration_cad.xml:system/etc/calibration_cad.xml
 
-# Extra packages
-PRODUCT_PACKAGES += \
-    Launcher3 \
-    Stk \
-    Terminal
+# Additional packages
+-include vendor/skydragon/products/packages.mk
 
 # Init.d script support
 PRODUCT_COPY_FILES += \
