@@ -11,3 +11,8 @@ PRODUCT_PACKAGES += \
 # BusyBox
 PRODUCT_PACKAGES += \
     busybox
+
+# Spectrum
+PRODUCT_PACKAGES += \
+    Spectrum
+
