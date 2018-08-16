@@ -43,7 +43,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
 
 # Fix Dialer
 PRODUCT_COPY_FILES +=  \
-    vendor/skydragon/prebuilt/common/etc/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
+    vendor/skydragon/prebuilt/etc/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -52,35 +52,35 @@ PRODUCT_COPY_FILES += \
 # Latin IME lib - gesture typing
 ifeq ($(TARGET_ARCH),arm64)
 PRODUCT_COPY_FILES += \
-    vendor/skydragon/prebuilt/common/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so \
-    vendor/skydragon/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+    vendor/skydragon/prebuilt/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so \
+    vendor/skydragon/prebuilt/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 else
 PRODUCT_COPY_FILES += \
-    vendor/skydragon/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+    vendor/skydragon/prebuilt/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 endif
 
 # APN
 PRODUCT_COPY_FILES += \
-    vendor/skydragon/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+    vendor/skydragon/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 # AR
 PRODUCT_COPY_FILES += \
-    vendor/skydragon/prebuilt/common/etc/calibration_cad.xml:system/etc/calibration_cad.xml
+    vendor/skydragon/prebuilt/etc/calibration_cad.xml:system/etc/calibration_cad.xml
 
 # Additional packages
 -include vendor/skydragon/products/packages.mk
 
 # Init.d script support
 PRODUCT_COPY_FILES += \
-    vendor/skydragon/prebuilt/common/bin/sysinit:system/bin/sysinit \
-    vendor/skydragon/prebuilt/common/init.d/00banner:system/etc/init.d/00banner \
-    vendor/skydragon/prebuilt/common/init.d/init.d.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.d.rc
+    vendor/skydragon/prebuilt/bin/sysinit:system/bin/sysinit \
+    vendor/skydragon/prebuilt/init.d/00banner:system/etc/init.d/00banner \
+    vendor/skydragon/prebuilt/init.d/init.d.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.d.rc
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/skydragon/prebuilt/common/addon.d/50-skydragon.sh:system/addon.d/50-skydragon.sh \
-    vendor/skydragon/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/skydragon/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions
+    vendor/skydragon/prebuilt/addon.d/50-skydragon.sh:system/addon.d/50-skydragon.sh \
+    vendor/skydragon/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/skydragon/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions
 
 # Boot animations
 $(call inherit-product-if-exists, vendor/skydragon/products/bootanimation.mk)
