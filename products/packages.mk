@@ -7,3 +7,7 @@ PRODUCT_PACKAGES += \
 # HDK-Mod
 PRODUCT_PACKAGES += \
     HDK-Mod
+
+# BusyBox
+PRODUCT_PACKAGES += \
+    busybox
