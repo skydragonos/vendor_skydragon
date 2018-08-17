@@ -1,0 +1,7 @@
+#!/system/bin/sh
+log -p i -t start "******** Welcome to SkyDragon *********";
+log -p i -t start "  __..  ..   ,.__ .__ .__..__ .__..  . ";
+log -p i -t start " (__ |_/  \./ |  \[__)[__][ __|  ||\ | ";
+log -p i -t start " .__)|  \  |  |__/|  \|  |[_./|__|| \| ";
+log -p i -t start "                                       ";
+log -p i -t start "* By HolyAngel ********** Android 9.0 *";

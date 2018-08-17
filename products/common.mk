@@ -73,8 +73,8 @@ PRODUCT_COPY_FILES += \
 # Init.d script support
 PRODUCT_COPY_FILES += \
     vendor/skydragon/prebuilt/bin/sysinit:system/bin/sysinit \
-    vendor/skydragon/prebuilt/init.d/00banner:system/etc/init.d/00banner \
-    vendor/skydragon/prebuilt/init.d/init.d.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.d.rc
+    vendor/skydragon/prebuilt/etc/init/skydragon.rc:system/etc/init/skydragon.rc \
+    vendor/skydragon/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
