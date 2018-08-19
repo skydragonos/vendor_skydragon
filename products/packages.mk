@@ -16,3 +16,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Spectrum
 
+# Digital Wellbeing
+PRODUCT_PACKAGES += \
+    WellbeingPrebuilt
