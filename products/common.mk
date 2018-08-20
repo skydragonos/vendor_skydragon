@@ -28,6 +28,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.opa.eligible_device=true \
     persist.sys.disable_rescue=true \
     ro.config.calibration_cad=/system/etc/calibration_cad.xml
+    ro.boot.vendor.overlay.theme=com.skydragon.theme.accent.pumpkin;com.skydragon.theme.primary.black
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     org.skydragon.fingerprint=$(PLATFORM_VERSION)-$(BUILD_ID)-$(SKYDRAGON_BUILD_DATE)
