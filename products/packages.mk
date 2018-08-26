@@ -1,6 +1,7 @@
 # Extra packages
 PRODUCT_PACKAGES += \
     Launcher3 \
+    OmniStyle \
     Stk \
     Terminal
 
