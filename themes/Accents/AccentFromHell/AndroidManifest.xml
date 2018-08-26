@@ -8,5 +8,5 @@
 
 
     <application android:hasCode="false"
-                 android:label="From Hell" android:category="android.theme" android:category="android.theme" />
+                 android:label="From Hell" />
 </manifest>
