@@ -20,6 +20,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     WellbeingPrebuilt
 
+# Google Settings Intelligence
+PRODUCT_PACKAGES += \
+SettingsIntelligenceGooglePrebuilt
+
 PRODUCT_PACKAGES += \
     AccentSluttyPink \
     AccentPixel \
