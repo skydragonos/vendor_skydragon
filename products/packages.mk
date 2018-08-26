@@ -51,6 +51,12 @@ PRODUCT_PACKAGES += \
     AccentAmber \
     AccentGrey
 
+# Notifications
+PRODUCT_PACKAGES += \
+    NotificationsDark \
+    NotificationsLight \
+    NotificationsPrimary
+
 # Primary Colors
 PRODUCT_PACKAGES += \
     PrimaryAlmostBlack \
