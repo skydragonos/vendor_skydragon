@@ -25,6 +25,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 SettingsIntelligenceGooglePrebuilt
 
+# Accents
 PRODUCT_PACKAGES += \
     AccentSluttyPink \
     AccentPixel \
@@ -50,6 +51,7 @@ PRODUCT_PACKAGES += \
     AccentAmber \
     AccentGrey
 
+# Primary Colors
 PRODUCT_PACKAGES += \
     PrimaryAlmostBlack \
     PrimaryBlack \
