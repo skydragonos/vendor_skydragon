@@ -99,6 +99,9 @@ PRODUCT_COPY_FILES += \
 # Boot animations
 $(call inherit-product-if-exists, vendor/skydragon/products/bootanimation.mk)
 
+# Theme Support
+-include vendor/skydragon/products/themes.mk
+
 # Include SDCLANG definitions if it is requested and available
 ifeq ($(HOST_OS),linux)
     ifneq ($(wildcard vendor/qcom/sdclang/),)
