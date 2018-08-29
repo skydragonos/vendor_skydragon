@@ -22,8 +22,8 @@ PRODUCT_PACKAGES += \
     WellbeingPrebuilt
 
 # Google Settings Intelligence
-PRODUCT_PACKAGES += \
-SettingsIntelligenceGooglePrebuilt
+#PRODUCT_PACKAGES += \
+#    SettingsIntelligenceGooglePrebuilt
 
 # Accents
 PRODUCT_PACKAGES += \
