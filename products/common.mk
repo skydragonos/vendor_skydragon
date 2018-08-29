@@ -46,6 +46,14 @@ DEVICE_PACKAGE_OVERLAYS += vendor/skydragon/overlay/common
 PRODUCT_COPY_FILES +=  \
     vendor/skydragon/prebuilt/etc/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
 
+# Turbo/Battery
+PRODUCT_COPY_FILES +=  \
+    vendor/skydragon/prebuilt/etc/sysconfig/turbo.xml:system/etc/sysconfig/turbo.xml
+
+# Extra Permissions
+PRODUCT_COPY_FILES +=  \
+    vendor/skydragon/prebuilt/etc/permissions/privapp-permissions-skydragon.xml:system/etc/permissions/privapp-permissions-skydragon.xml
+
 # Digital Wellbeing
 PRODUCT_COPY_FILES +=  \
     vendor/skydragon/prebuilt/etc/sysconfig/wellbeing-enabler.xml:system/etc/sysconfig/wellbeing-enabler.xml \
