@@ -107,7 +107,6 @@ $(call inherit-product-if-exists, vendor/skydragon/products/bootanimation.mk)
 # Include SDCLANG definitions if it is requested and available
 ifeq ($(HOST_OS),linux)
     ifneq ($(wildcard vendor/qcom/sdclang/),)
-        include vendor/skydragon/sdclang/sdclang.mk
         include vendor/skydragon/sdclang/sdllvm-lto-defs.mk
     endif
 endif
