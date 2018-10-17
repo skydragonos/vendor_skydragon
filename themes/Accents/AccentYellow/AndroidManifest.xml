@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.skydragon.theme.accent.fromhell"
+    package="com.skydragon.theme.accent.yellow"
     platformBuildVersionCode="26"
     platformBuildVersionName="8.0.0">
 
@@ -8,5 +8,5 @@
 
 
     <application android:hasCode="false"
-                 android:label="From Hell" />
+                 android:label="Yellow" />
 </manifest>

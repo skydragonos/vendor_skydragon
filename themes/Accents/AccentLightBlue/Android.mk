@@ -1,8 +1,8 @@
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
-LOCAL_PACKAGE_NAME := AccentGoldenShower
-LOCAL_RRO_THEME := AccnetGoldenShower
+LOCAL_PACKAGE_NAME := AccentLightBlue
+LOCAL_RRO_THEME := AccentLightBlue
 LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_TAGS := optional
 LOCAL_SDK_VERSION := current

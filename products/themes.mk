@@ -1,17 +1,14 @@
 # Accents
 PRODUCT_PACKAGES += \
-    AccentSluttyPink \
+    AccentHotPink \
     AccentPixel \
-    AccentGoldenShower \
+    AccentYellow \
     AccentDeepOrange \
     AccentOmni \
     AccentWhite \
     AccentTeal \
-    AccentFromHell \
-    AccentBlueMonday \
-    AccentSmokingGreen \
-    AccentDeadRed \
-    AccentRottenOrange \
+    AccentLightBlue \
+    AccentGreen \
     AccentDeepPurple \
     AccentCerulean \
     AccentEmerald \
@@ -36,6 +33,4 @@ PRODUCT_PACKAGES += \
     PrimaryBlack \
     PrimaryOmni \
     PrimaryWhite \
-    PrimaryColdWhite \
-    PrimaryWarmWhite \
     PrimaryDarkBlue
