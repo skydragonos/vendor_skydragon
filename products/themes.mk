@@ -19,7 +19,8 @@ PRODUCT_PACKAGES += \
     AccentCrimson \
     AccentBlack \
     AccentAmber \
-    AccentGrey
+    AccentGrey \
+    AccentFuchsia
 
 # Notifications
 PRODUCT_PACKAGES += \
