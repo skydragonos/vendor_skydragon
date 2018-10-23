@@ -7,6 +7,13 @@ PRODUCT_PACKAGES += \
     Stk \
     Terminal
 
+# CAF Telephony packages
+PRODUCT_PACKAGES += \
+    ims-ext-common \
+    telephony-ext
+ PRODUCT_BOOT_JARS += \
+    telephony-ext
+
 # HDK-Mod
 PRODUCT_PACKAGES += \
     HDK-Mod
