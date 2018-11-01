@@ -10,4 +10,9 @@
         <permission name="android.permission.SUBSTITUTE_NOTIFICATION_APP_NAME"/>
     </privapp-permissions>
 
+    <privapp-permissions package="com.android.dialer">
+        <permission name="android.permission.CAPTURE_AUDIO_OUTPUT"/>
+        <permission name="android.permission.STATUS_BAR"/>
+    </privapp-permissions>
+
 </permissions>
