@@ -56,11 +56,6 @@ PRODUCT_COPY_FILES +=  \
 PRODUCT_COPY_FILES +=  \
     vendor/skydragon/prebuilt/etc/permissions/privapp-permissions-skydragon.xml:system/etc/permissions/privapp-permissions-skydragon.xml
 
-# Digital Wellbeing
-PRODUCT_COPY_FILES +=  \
-    vendor/skydragon/prebuilt/etc/sysconfig/wellbeing-enabler.xml:system/etc/sysconfig/wellbeing-enabler.xml \
-    vendor/skydragon/prebuilt/etc/permissions/privapp-permissions-wellbeing.xml:system/etc/permissions/privapp-permissions-wellbeing.xml
-
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
