@@ -44,10 +44,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/skydragon/overlay/common
 DEVICE_PACKAGE_OVERLAYS += vendor/skydragon/overlay/common
 
-# Fix Dialer
-PRODUCT_COPY_FILES +=  \
-    vendor/skydragon/prebuilt/etc/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
-
 # Turbo/Battery
 PRODUCT_COPY_FILES +=  \
     vendor/skydragon/prebuilt/etc/sysconfig/turbo.xml:system/etc/sysconfig/turbo.xml
