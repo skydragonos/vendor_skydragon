@@ -4,6 +4,7 @@ PRODUCT_PACKAGES += \
     Launcher3QuickStep \
     OmniStyle \
     OmniJaws \
+    Phonograph \
     Stk \
     Terminal
 
