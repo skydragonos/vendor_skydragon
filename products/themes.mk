@@ -22,6 +22,7 @@ PRODUCT_PACKAGES += \
     AccentGrey \
     AccentFuchsia \
     AccentGreenTea \
+    AccentOctane 
 
 # Notifications
 PRODUCT_PACKAGES += \
