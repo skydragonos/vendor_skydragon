@@ -20,7 +20,8 @@ PRODUCT_PACKAGES += \
     AccentBlack \
     AccentAmber \
     AccentGrey \
-    AccentFuchsia
+    AccentFuchsia \
+    AccentGreenTea \
 
 # Notifications
 PRODUCT_PACKAGES += \
