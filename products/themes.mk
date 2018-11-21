@@ -38,4 +38,5 @@ PRODUCT_PACKAGES += \
     PrimaryBlack \
     PrimaryOmni \
     PrimaryWhite \
-    PrimaryDarkBlue
+    PrimaryDarkBlue \
+    PrimaryPlum 
