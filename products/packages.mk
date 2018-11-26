@@ -1,3 +1,14 @@
+# BusyBox
+PRODUCT_PACKAGES += \
+    busybox
+
+# CAF Telephony packages
+PRODUCT_PACKAGES += \
+    ims-ext-common \
+    telephony-ext
+ PRODUCT_BOOT_JARS += \
+    telephony-ext
+
 # Extra packages
 PRODUCT_PACKAGES += \
     Launcher3 \
@@ -8,20 +19,13 @@ PRODUCT_PACKAGES += \
     Stk \
     Terminal
 
-# CAF Telephony packages
+# Fonts
 PRODUCT_PACKAGES += \
-    ims-ext-common \
-    telephony-ext
- PRODUCT_BOOT_JARS += \
-    telephony-ext
+    SkyDragonFonts
 
 # HDK-Mod
 PRODUCT_PACKAGES += \
     HDK-Mod
-
-# BusyBox
-PRODUCT_PACKAGES += \
-    busybox
 
 # Spectrum
 PRODUCT_PACKAGES += \

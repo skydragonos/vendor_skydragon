@@ -125,4 +125,8 @@
     <integer name="config_autoBrightnessBrighteningLightDebounce">2000</integer>
     <integer name="config_autoBrightnessDarkeningLightDebounce">2000</integer>
 
+    <string-array name="config_fontPackages" translatable="false">
+        <item>com.skydragon.fonts</item>
+    </string-array>
+
 </resources>
