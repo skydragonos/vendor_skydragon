@@ -41,3 +41,10 @@ PRODUCT_PACKAGES += \
     PrimaryWhite \
     PrimaryDarkBlue \
     PrimaryPlum 
+
+# App Themes
+PRODUCT_PACKAGES += \
+    DocumentsUITheme \
+    DialerTheme \
+    TelecommTheme \
+    PhonographTheme
