@@ -101,3 +101,6 @@ ifeq ($(HOST_OS),linux)
         include vendor/skydragon/sdclang/sdllvm-lto-defs.mk
     endif
 endif
+
+# Audio Support
+-include vendor/skydragon/products/audio.mk
