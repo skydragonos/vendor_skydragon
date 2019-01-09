@@ -25,7 +25,8 @@ PRODUCT_PACKAGES += \
     AccentOctane \
     AccentPlum \
     AccentNuclearSlime \
-    AccentBeach
+    AccentBeach \
+    AccentNeonGreen
 
 # Notifications
 PRODUCT_PACKAGES += \
