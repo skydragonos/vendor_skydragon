@@ -23,10 +23,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SkyDragonFonts
 
-# HDK-Mod
-PRODUCT_PACKAGES += \
-    HDK-Mod
-
 # Spectrum
 PRODUCT_PACKAGES += \
     Spectrum
