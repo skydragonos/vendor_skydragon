@@ -24,8 +24,8 @@ PRODUCT_PACKAGES += \
     SkyDragonFonts
 
 # Spectrum
-PRODUCT_PACKAGES += \
-    Spectrum
+#PRODUCT_PACKAGES += \
+#    Spectrum
 
 # Google Settings Intelligence
 #PRODUCT_PACKAGES += \
