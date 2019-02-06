@@ -34,3 +34,8 @@ PRODUCT_PACKAGES += \
 # Turbo
 PRODUCT_PACKAGES += \
     Turbo
+
+# SmartNav
+PRODUCT_PACKAGES += \
+    SmartNav \
+    SmartNavSettings
