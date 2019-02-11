@@ -84,10 +84,18 @@ PRODUCT_COPY_FILES += \
     vendor/skydragon/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner
 
 # Backup Tool
+ifeq ($(AB_OTA_UPDATER),true)
+PRODUCT_COPY_FILES += \
+    vendor/skydragon/prebuilt/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
+    vendor/skydragon/prebuilt/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
+    vendor/skydragon/prebuilt/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh \
+    vendor/skydragon/prebuilt/addon.d/69-gapps.sh:system/addon.d/69-gapps.sh
+else
 PRODUCT_COPY_FILES += \
     vendor/skydragon/prebuilt/addon.d/50-skydragon.sh:system/addon.d/50-skydragon.sh \
     vendor/skydragon/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
     vendor/skydragon/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions
+endif
 
 # Boot animations
 $(call inherit-product-if-exists, vendor/skydragon/products/bootanimation.mk)
