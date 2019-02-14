@@ -916,6 +916,7 @@
             <string name="roaming_protocol">IPV4V6</string>
         </map>
         <boolean name="ignore_data_enabled_changed_for_video_calls" value="true" />
+        <boolean name="config_show_orig_dial_string_for_cdma" value="true" />
     </carrier_config>
     <carrier_config mcc="460" mnc="06">
         <boolean name="carrier_volte_available_bool" value="true" />
@@ -1203,6 +1204,7 @@
         <boolean name="carrier_rtt_upgrade_supported" value="true" />
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="vowifi_call_quality" value="true" />
     </carrier_config>
     <carrier_config mcc="310" mnc="160">
         <boolean name="carrier_vt_available_bool" value="true" />
