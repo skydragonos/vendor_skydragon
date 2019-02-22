@@ -46,7 +46,10 @@ PRODUCT_PACKAGES += \
 
 # App Themes
 PRODUCT_PACKAGES += \
-    DocumentsUITheme \
+    ContactsTheme \
     DialerTheme \
+    DocumentsUITheme \
+    GboardOmniTheme \
+    MessagesTheme \
     TelecommTheme \
     PhonographTheme
