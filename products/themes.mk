@@ -5,7 +5,6 @@ PRODUCT_PACKAGES += \
     AccentYellow \
     AccentDeepOrange \
     AccentOmni \
-    AccentWhite \
     AccentTeal \
     AccentLightBlue \
     AccentGreen \
@@ -40,7 +39,6 @@ PRODUCT_PACKAGES += \
     PrimaryAlmostBlack \
     PrimaryBlack \
     PrimaryOmni \
-    PrimaryWhite \
     PrimaryDarkBlue \
     PrimaryPlum 
 
