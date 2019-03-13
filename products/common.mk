@@ -81,7 +81,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/skydragon/prebuilt/bin/sysinit:system/bin/sysinit \
     vendor/skydragon/prebuilt/etc/init/skydragon.rc:system/etc/init/skydragon.rc \
-    vendor/skydragon/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner
+    vendor/skydragon/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner \
+    vendor/skydragon/prebuilt/etc/init.d/00banner:system/etc/init.d/01zipalign \
+    vendor/skydragon/prebuilt/xbin/zipalign:system/xbin/zipalign
 
 # Backup Tool
 ifeq ($(AB_OTA_UPDATER),true)
