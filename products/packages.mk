@@ -2,6 +2,11 @@
 PRODUCT_PACKAGES += \
     busybox
 
+# Charge Animation
+PRODUCT_PACKAGES += \
+    animation.txt \
+    font_charger.png
+
 # CAF Telephony packages
 PRODUCT_PACKAGES += \
     ims-ext-common \
