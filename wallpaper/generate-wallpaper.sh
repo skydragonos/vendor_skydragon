@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #################################
-#EXECUTE FROM SLIM ROOT DIRECTORY
+#EXECUTE FROM DRAGON ROOT DIRECTORY
 #################################
 
 
@@ -17,10 +17,10 @@ fi
 BASE_NAME=default_wallpaper.png
 
 #SOURCE IMAGE LOCATION
-BASE_WALLPAPER=$(echo "$PWD"/vendor/slim/wallpaper/"$BASE_NAME")
+BASE_WALLPAPER=$(echo "$PWD"/vendor/skydragon/wallpaper/"$BASE_NAME")
 
 #OUTPUT WALLPAPERS LOCATION
-OUTPUT_PACKAGE=$(echo "$PWD"/vendor/slim/overlay/common/frameworks/base/core/res/res/)
+OUTPUT_PACKAGE=$(echo "$PWD"/vendor/skydragon/overlay/common/frameworks/base/core/res/res/)
 
 #STANDARD IMAGE SIZES
 HDPI_RES="1080x960"

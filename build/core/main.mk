@@ -1,2 +1,2 @@
-# Include Slim versions
-include $(TOPDIR)vendor/slim/build/core/main_version.mk
+# Include Skydragon versions
+include $(TOPDIR)vendor/skydragon/build/core/main_version.mk

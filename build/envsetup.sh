@@ -1,4 +1,4 @@
-# slim functions that extend build/envsetup.sh
+# skydragon functions that extend build/envsetup.sh
 function __print_slim_functions_help() {
 cat <<EOF
 Additional SlimRoms functions:
@@ -26,22 +26,22 @@ Additional SlimRoms functions:
 EOF
 }
 
-function slim_rename_function()
+function skydragon_rename_function()
 {
     eval "original_slim_$(declare -f ${1})"
 }
 
-function _slim_build_hmm() #hidden
+function _skydragon_build_hmm() #hidden
 {
     printf "%-8s %s" "${1}:" "${2}"
 }
 
-function slim_append_hmm()
+function skydragon_append_hmm()
 {
     HMM_DESCRIPTIVE=("${HMM_DESCRIPTIVE[@]}" "$(_slim_build_hmm "$1" "$2")")
 }
 
-function slim_add_hmm_entry()
+function skydragon_add_hmm_entry()
 {
     for c in ${!HMM_DESCRIPTIVE[*]}
     do
@@ -51,10 +51,10 @@ function slim_add_hmm_entry()
             return
         fi
     done
-    slim_append_hmm "$1" "$2"
+    skydragon_append_hmm "$1" "$2"
 }
 
-function slimremote()
+function skydragonremote()
 {
     local proj pfx project
 
@@ -63,7 +63,7 @@ function slimremote()
         echo "Not in a git directory. Please run this from an Android repository you wish to set up."
         return
     fi
-    git remote rm slim 2> /dev/null
+    git remote rm skydragon 2> /dev/null
 
     proj="$(pwd -P | sed "s#$ANDROID_BUILD_TOP/##g")"
 
@@ -73,8 +73,8 @@ function slimremote()
 
     project="${proj//\//_}"
 
-    git remote add slim "git@github.com:SlimRoms/$pfx$project"
-    echo "Remote 'slim' created"
+    git remote add skydragon "git@github.com:skydragonos/$pfx$project"
+    echo "Remote 'skydragon' created"
 }
 
 function losremote()
@@ -168,8 +168,8 @@ function hmm() #hidden
     original_slim_hmm
     echo
 
-    echo "vendor/slim extended functions. The complete list is:"
-    for i in $(grep -P '^function .*$' "$T/vendor/slim/build/envsetup.sh" | grep -v "#hidden" | sed 's/function \([a-z_]*\).*/\1/' | sort | uniq); do
+    echo "vendor/skydragon extended functions. The complete list is:"
+    for i in $(grep -P '^function .*$' "$T/vendor/skydragon/build/envsetup.sh" | grep -v "#hidden" | sed 's/function \([a-z_]*\).*/\1/' | sort | uniq); do
         echo "$i"
     done |column
 }
@@ -242,7 +242,7 @@ function breakfast()
             # A buildtype was specified, assume a full device name
             lunch $target
         else
-            # This is probably just the SLIM model name
+            # This is probably just the DRAGON model name
             if [ -z "$variant" ]; then
                 variant="userdebug"
             fi
@@ -257,7 +257,7 @@ alias bib=breakfast
 function eat()
 {
     if [ "$OUT" ] ; then
-        MODVERSION=$(get_build_var SLIM_MOD_VERSION)
+        MODVERSION=$(get_build_var SKYDRAGON_MOD_VERSION)
         ZIPFILE=$MODVERSION.zip
         ZIPPATH=$OUT/$ZIPFILE
         if [ ! -f $ZIPPATH ] ; then
@@ -273,7 +273,7 @@ function eat()
             done
             echo "Device Found.."
         fi
-    if (adb shell getprop ro.slim.device | grep -q "$SLIM_BUILD");
+    if (adb shell getprop ro.skydragon.device | grep -q "$SKYDRAGON_BUILD");
     then
         # if adbd isn't root we can't write to /cache/recovery/
         adb root
@@ -295,7 +295,7 @@ EOF
     fi
     return $?
     else
-        echo "The connected device does not appear to be $SLIM_BUILD, run away!"
+        echo "The connected device does not appear to be $SKYDRAGON_BUILD, run away!"
     fi
 }
 
@@ -444,7 +444,7 @@ function installboot()
     sleep 1
     adb wait-for-online shell mount /system 2>&1 > /dev/null
     adb wait-for-online remount
-    if (adb shell getprop ro.slim.device | grep -q "$SLIM_BUILD");
+    if (adb shell getprop ro.skydragon.device | grep -q "$SKYDRAGON_BUILD");
     then
         adb push $OUT/boot.img /cache/
         for i in $OUT/system/lib/modules/*;
@@ -455,7 +455,7 @@ function installboot()
         adb shell chmod 644 /system/lib/modules/*
         echo "Installation complete."
     else
-        echo "The connected device does not appear to be $SLIM_BUILD, run away!"
+        echo "The connected device does not appear to be $SKYDRAGON_BUILD, run away!"
     fi
 }
 
@@ -489,13 +489,13 @@ function installrecovery()
     sleep 1
     adb wait-for-online shell mount /system 2>&1 >> /dev/null
     adb wait-for-online remount
-    if (adb shell getprop ro.slim.device | grep -q "$SLIM_BUILD");
+    if (adb shell getprop ro.skydragon.device | grep -q "$SKYDRAGON_BUILD");
     then
         adb push $OUT/recovery.img /cache/
         adb shell dd if=/cache/recovery.img of=$PARTITION
         echo "Installation complete."
     else
-        echo "The connected device does not appear to be $SLIM_BUILD, run away!"
+        echo "The connected device does not appear to be $SKYDRAGON_BUILD, run away!"
     fi
 }
 
@@ -516,7 +516,7 @@ function makerecipe() {
     then
         pwd
         slimremote
-        git push slim HEAD:refs/heads/'$1'
+        git push skydragon HEAD:refs/heads/'$1'
     fi
     '
 }
@@ -895,7 +895,7 @@ function dopush()
         echo "Device Found."
     fi
 
-    if (adb shell getprop ro.slim.device | grep -q "$SLIM_BUILD") || [ "$FORCE_PUSH" = "true" ];
+    if (adb shell getprop ro.skydragon.device | grep -q "$SKYDRAGON_BUILD") || [ "$FORCE_PUSH" = "true" ];
     then
     # retrieve IP and PORT info if we're using a TCP connection
     TCPIPPORT=$(adb devices \
@@ -1010,7 +1010,7 @@ EOF
     fi
     return 0
     else
-        echo "The connected device does not appear to be $SLIM_BUILD, run away!"
+        echo "The connected device does not appear to be $SKYDRAGON_BUILD, run away!"
     fi
 }
 
@@ -1022,14 +1022,14 @@ alias slimkap='dopush slimka'
 
 function repopick() {
     T=$(gettop)
-    $T/vendor/slim/build/tools/repopick.py $@
+    $T/vendor/skydragon/build/tools/repopick.py $@
 }
 
 function fixup_common_out_dir() {
     common_out_dir=$(get_build_var OUT_DIR)/target/common
     target_device=$(get_build_var TARGET_DEVICE)
     common_target_out=common-${target_device}
-    if [ ! -z $SLIM_FIXUP_COMMON_OUT ]; then
+    if [ ! -z $SKYDRAGON_FIXUP_COMMON_OUT ]; then
         if [ -d ${common_out_dir} ] && [ ! -L ${common_out_dir} ]; then
             mv ${common_out_dir} ${common_out_dir}-${target_device}
             ln -s ${common_target_out} ${common_out_dir}

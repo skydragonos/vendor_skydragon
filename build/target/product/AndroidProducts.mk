@@ -15,13 +15,13 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/slim_arm.mk \
-    $(LOCAL_DIR)/slim_arm64.mk \
-    $(LOCAL_DIR)/slim_x86.mk \
-    $(LOCAL_DIR)/slim_x86_64.mk
+    $(LOCAL_DIR)/skydragon_arm.mk \
+    $(LOCAL_DIR)/skydragon_arm64.mk \
+    $(LOCAL_DIR)/skydragon_x86.mk \
+    $(LOCAL_DIR)/skydragon_x86_64.mk
 
 COMMON_LUNCH_CHOICES := \
-    slim_arm-userdebug \
-    slim_arm64-userdebug \
-    slim_x86-userdebug \
-    slim_x86_64-userdebug
+    skydragon_arm-userdebug \
+    skydragon_arm64-userdebug \
+    skydragon_x86-userdebug \
+    skydragon_x86_64-userdebug

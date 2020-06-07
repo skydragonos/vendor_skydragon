@@ -1,6 +1,6 @@
 #
 #
-# Slim specific variable clears
+# Skydragon specific variable clears
 #
 #
 

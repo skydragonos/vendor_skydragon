@@ -22,32 +22,32 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/slim/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/slim/prebuilt/common/bin/50-slim.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-slim.sh
+    vendor/skydragon/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/skydragon/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/skydragon/prebuilt/common/bin/50-skydragon.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-slim.sh
 
 ifneq ($(AB_OTA_PARTITIONS),)
 PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/bin/backuptool_ab.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.sh \
-    vendor/slim/prebuilt/common/bin/backuptool_ab.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.functions \
-    vendor/slim/prebuilt/common/bin/backuptool_postinstall.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_postinstall.sh
+    vendor/skydragon/prebuilt/common/bin/backuptool_ab.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.sh \
+    vendor/skydragon/prebuilt/common/bin/backuptool_ab.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.functions \
+    vendor/skydragon/prebuilt/common/bin/backuptool_postinstall.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_postinstall.sh
 endif
 
-# SLIM-specific init file
+# DRAGON-specific init file
 PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/etc/init.slim.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.slim.rc
+    vendor/skydragon/prebuilt/common/etc/init.skydragon.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.slim.rc
 
 # Copy over added mimetype supported in libcore.net.MimeUtils
 PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/lib/content-types.properties:$(TARGET_COPY_OUT_SYSTEM)/lib/content-types.properties
+    vendor/skydragon/prebuilt/common/lib/content-types.properties:$(TARGET_COPY_OUT_SYSTEM)/lib/content-types.properties
 
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
-    vendor/slim/config/permissions/backup.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/backup.xml
+    vendor/skydragon/config/permissions/backup.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/backup.xml
 
 # Enable Android Beam on all targets
 PRODUCT_COPY_FILES += \
-    vendor/slim/config/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.nfc.beam.xml
+    vendor/skydragon/config/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.nfc.beam.xml
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -55,15 +55,15 @@ PRODUCT_COPY_FILES += \
 
 # Don't export PS1 in /system/etc/mkshrc.
 PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/etc/mkshrc:$(TARGET_COPY_OUT_SYSTEM)/etc/mkshrc \
-    vendor/slim/prebuilt/common/etc/sysctl.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/sysctl.conf
+    vendor/skydragon/prebuilt/common/etc/mkshrc:$(TARGET_COPY_OUT_SYSTEM)/etc/mkshrc \
+    vendor/skydragon/prebuilt/common/etc/sysctl.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/sysctl.conf
 
 # Include AOSP audio files
-include vendor/slim/config/aosp_audio.mk
+include vendor/skydragon/config/aosp_audio.mk
 
 # TWRP
 ifeq ($(WITH_TWRP),true)
-include vendor/slim/config/twrp.mk
+include skydragon/slim/config/twrp.mk
 endif
 
 # Do not include art debug targets
@@ -88,10 +88,10 @@ PRODUCT_PACKAGES += \
     WallpaperPicker
 #    SlimFileManager removed until updated
 
-ifneq ($(DISABLE_SLIM_FRAMEWORK), true)
+#ifneq ($(DISABLE_SLIM_FRAMEWORK), true)
 ## Slim Framework
-include frameworks/slim/slim_framework.mk
-endif
+#include frameworks/slim/slim_framework.mk
+#endif
 
 ## Don't compile SystemUITests
 EXCLUDE_SYSTEMUI_TESTS := true
@@ -113,18 +113,18 @@ PRODUCT_PACKAGES += \
     wget
 
 PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/slim/overlay/common \
-    vendor/slim/overlay/dictionaries
+    vendor/skydragon/overlay/common \
+    vendor/skydragon/overlay/dictionaries
 
 PRODUCT_COPY_FILES += \
-    vendor/slim/config/permissions/privapp-permissions-slim.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-slim.xml \
-    vendor/slim/config/permissions/privapp-permissions-slim-legacy.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-slim-legacy.xml
+    vendor/skydragon/config/permissions/privapp-permissions-skydragon.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-skydragon.xml \
+    vendor/skydragon/config/permissions/privapp-permissions-skydragon-legacy.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-skydragon-legacy.xml
 
-EXTENDED_POST_PROCESS_PROPS := vendor/slim/tools/slim_process_props.py
+EXTENDED_POST_PROCESS_PROPS := vendor/skydragon/tools/skydragon_process_props.py
 
 PRODUCT_EXTRA_RECOVERY_KEYS += \
-  vendor/slim/build/target/product/security/slim
+  vendor/skydragon/build/target/product/security/skydragon
 
--include vendor/slim-priv/keys/keys.mk
+-include vendor/skydragon-priv/keys/keys.mk
 
 $(call inherit-product-if-exists, vendor/extra/product.mk)

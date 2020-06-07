@@ -36,7 +36,7 @@ if [ ! -r /system/build.prop ]; then
     return 0
 fi
 
-grep -q "^ro.slim.version=$V.*" /system/etc/prop.default /system/build.prop && return 1
+grep -q "^ro.skydragon.version=$V.*" /system/etc/prop.default /system/build.prop && return 1
 
 echo "Not backing up files from incompatible version: $V"
 return 0

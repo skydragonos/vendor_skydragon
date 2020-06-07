@@ -40,13 +40,13 @@ except ImportError:
     urllib.request = urllib2
 
 DEBUG = True
-default_manifest = ".repo/manifests/slim_default.xml"
+default_manifest = ".repo/manifests/skydragon_default.xml"
 
-custom_local_manifest = ".repo/local_manifests/slim_manifest.xml"
-custom_default_revision = "10.0"
-custom_dependencies = "slim.dependencies"
-org_manifest = "SlimRoms"  # leave empty if org is provided in manifest
-org_display = "SlimRoms"  # needed for displaying
+custom_local_manifest = ".repo/local_manifests/skydragon_manifest.xml"
+custom_default_revision = "ten"
+custom_dependencies = "skydragon.dependencies"
+org_manifest = "SkydragonOs"  # leave empty if org is provided in manifest
+org_display = "SkydragonOs"  # needed for displaying
 
 github_auth = None
 
